@@ -1,5 +1,5 @@
-import { todoList } from "./todo/todoList.js";
-import { getTodo } from "./todo/todoProvider.js";
-import { todoForm } from "./todo/todoForm.js";
+import { taskList } from "./tasks/taskList.js";
+import { getTasks } from "./tasks/taskProvider.js";
+import { taskForm } from "./tasks/taskForm.js";
 
-getTodo().then(todoList).then(todoForm);
+getTasks().then(taskList).then(taskForm);
