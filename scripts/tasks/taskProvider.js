@@ -21,3 +21,9 @@ export const addTask = (newTask) => {
     body: JSON.stringify(newTask),
   });
 };
+
+export const deleteTask = (taskID) => {
+  return fetch(`http://localhost:8088/tasks/${taskID}`, {
+    method: "DELETE",
+  });
+};

@@ -5,32 +5,16 @@
       "description": "This is a placeholder"
     },
     {
-      "description": "This is a test",
+      "description": "Test 2",
       "id": 2
     },
     {
-      "description": "This is another test",
+      "description": "Test 3",
       "id": 3
     },
     {
-      "description": "Test 3",
-      "id": 4
-    },
-    {
-      "description": "Test 4",
-      "id": 5
-    },
-    {
       "description": "Test 5",
-      "id": 6
-    },
-    {
-      "description": "Test 6",
-      "id": 7
-    },
-    {
-      "description": "Test 7",
-      "id": 8
+      "id": 4
     }
   ]
 }

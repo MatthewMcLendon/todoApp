@@ -1,4 +1,4 @@
-import { useTasks } from "./taskProvider.js";
+import { useTasks, deleteTask } from "./taskProvider.js";
 import { taskComponent } from "./task.js";
 
 const targetElement = document.querySelector(".task-container");
@@ -14,6 +14,7 @@ const taskListHandler = () => {
   eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.className === "taskCheckbox") {
       clickEvent.target.className = "taskCheckboxCompleted";
+      deleteTask(clickEvent.target.id);
     }
   });
 };
