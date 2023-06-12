@@ -11,3 +11,14 @@ export const getTodo = () => {
       todo = response.slice();
     });
 };
+
+export const addTodo = (newTodo) => {
+  console.log("add route", newTodo);
+  return fetch("http://localhost:8088/todo", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newTodo),
+  });
+};

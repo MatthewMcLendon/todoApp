@@ -1,6 +1,8 @@
 export const todoComponent = (todoEntry) => {
   return `
-    <input type="checkbox" id="todo ${todoEntry.id}" value="todo${todoEntry.id}Checkbox">
-    <label for="todo ${todoEntry.id}">${todoEntry.description}</label>
+    <div class="todo-card">
+      <input type="checkbox" id="todo${todoEntry.id}" class="todoCheckbox" value="todo${todoEntry.id}">
+      <label for="todo ${todoEntry.id}">${todoEntry.description}</label>
+    </div>
     `;
 };
