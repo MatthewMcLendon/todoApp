@@ -28,7 +28,6 @@ const taskListHandler = () => {
 const render = (tasks) => {
   targetElement.innerHTML = `
   <div class="todo-list-container">
-  <h2 class="todo-list-header">To do:</h2>
   ${tasks
     .map((task) => {
       return taskComponent(task);

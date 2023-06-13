@@ -36,7 +36,7 @@ const taskFormHandler = () => {
           console.log("deleting", task.id);
         }
       });
-
+      
       getTasks().then(taskList);
     }
   });
