@@ -27,3 +27,13 @@ export const deleteTask = (taskID) => {
     method: "DELETE",
   });
 };
+
+export const updateTask = (updatedTask) => {
+  return fetch(`http://localhost:8088/tasks/${updatedTask.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedTask),
+  });
+};

@@ -1,11 +1,12 @@
-import { useTasks, deleteTask } from "./taskProvider.js";
+import { useTasks, updateTask } from "./taskProvider.js";
 import { taskComponent } from "./task.js";
 
 const targetElement = document.querySelector(".task-container");
 const eventHub = document.querySelector(".container");
+let tasks = [];
 
 export const taskList = () => {
-  const tasks = useTasks();
+  tasks = useTasks();
   render(tasks);
   taskListHandler();
 };
@@ -14,7 +15,12 @@ const taskListHandler = () => {
   eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.className === "taskCheckbox") {
       clickEvent.target.className = "taskCheckboxCompleted";
-      deleteTask(clickEvent.target.id);
+      const updatedTask = tasks.find(
+        (task) => task.id.toString() === clickEvent.target.id
+      );
+      updatedTask.completed = true;
+      updateTask(updatedTask);
+      // change delete to an update route. Will bulk delete on button press
     }
   });
 };
