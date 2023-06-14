@@ -29,15 +29,14 @@ const taskFormHandler = () => {
 
     if (clickEvent.target.id === "task-form-delete") {
       const tasks = useTasks();
+      let deleteQueue = [];
 
       tasks.map((task) => {
         if (task.completed) {
-          deleteTask(task.id);
-          console.log("deleting", task.id);
+          deleteQueue.push(task);
         }
       });
-      
-      getTasks().then(taskList);
+      deleteQueueHandler(deleteQueue);
     }
   });
 };
@@ -45,3 +44,15 @@ const taskFormHandler = () => {
 const taskFormReset = () => {
   document.querySelector("#task-form-input").value = "";
 };
+
+async function deleteQueueHandler(tasks) {
+  if (tasks) {
+    await deleteTask(tasks[0].id);
+    tasks.shift();
+    if (tasks.length === 0) {
+      getTasks().then(taskList);
+    } else {
+      deleteQueueHandler(tasks);
+    }
+  }
+}

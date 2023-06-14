@@ -20,7 +20,6 @@ const taskListHandler = () => {
       );
       updatedTask.completed = true;
       updateTask(updatedTask);
-      // change delete to an update route. Will bulk delete on button press
     }
   });
 };

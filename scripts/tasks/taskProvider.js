@@ -30,7 +30,7 @@ export const deleteTask = (taskID) => {
 
 export const updateTask = (updatedTask) => {
   return fetch(`http://localhost:8088/tasks/${updatedTask.id}`, {
-    method: "PUT",
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
