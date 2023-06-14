@@ -50,5 +50,14 @@
       "completed": false,
       "id": 10
     }
+  ],
+  "events": [
+    {
+      "title": "Title event 1",
+      "description": "Test event 1",
+      "location": "event 1 location",
+      "date": 1686781615714,
+      "id": 1
+    }
   ]
 }
