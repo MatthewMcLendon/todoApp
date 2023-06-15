@@ -14,11 +14,13 @@ const eventFormHandler = () => {
     if (clickEvent.target.id === "event-form-submit") {
       clickEvent.preventDefault();
 
+      let date = dateFormater();
+
       const newEvent = {
         title: document.querySelector(".event-form-title").value,
         description: document.querySelector(".event-form-description").value,
         location: document.querySelector(".event-form-location").value,
-        date: document.querySelector(".event-form-date").value,
+        date: date,
       };
 
       addEvent(newEvent).then(getEvents).then(eventList).then(eventFormReset);
@@ -31,6 +33,15 @@ const eventFormReset = () => {
   document.querySelector(".event-form-location").value = "";
   document.querySelector(".event-form-description").value = "";
   document.querySelector(".event-form-date").value = "";
+  document.querySelector(".event-form-time").value = "";
+};
+
+const dateFormater = () => {
+  const tempDate = document.querySelector(".event-form-date").value;
+  const tempTime = document.querySelector(".event-form-time").value;
+
+  const date = `${tempDate}T${tempTime}:00`;
+  return date;
 };
 
 const render = () => {
@@ -51,8 +62,12 @@ const render = () => {
         <input type="text" class="event-form-description">
       </div>
       <div>
-        <label for="event-form-date">Event Time:</label>
+        <label for="event-form-date">Event Date:</label>
         <input type="date" class="event-form-date">
+      </div>
+      <div>
+        <label for="event-form-time">Event Time:</label>
+        <input type="time" class="event-form-time">
       </div>
       <button id="event-form-submit">Add event</button>
     </form>
