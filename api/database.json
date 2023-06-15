@@ -49,14 +49,19 @@
       "description": "Test 10",
       "completed": false,
       "id": 10
+    },
+    {
+      "description": "Test 11",
+      "completed": false,
+      "id": 11
     }
   ],
   "events": [
     {
-      "title": "Title event 1",
-      "description": "Test event 1",
-      "location": "event 1 location",
-      "date": 1686781615714,
+      "title": "Test 1",
+      "description": "Test 1",
+      "location": "Test 1",
+      "date": "2023-06-14",
       "id": 1
     }
   ]

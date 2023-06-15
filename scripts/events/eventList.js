@@ -9,7 +9,9 @@ export const eventList = () => {
 };
 
 const render = (events) => {
-  targetElement.innerHTML = events.map((event) => {
-    return eventComponent(event);
-  });
+  targetElement.innerHTML = events
+    .map((event) => {
+      return eventComponent(event);
+    })
+    .join("");
 };
