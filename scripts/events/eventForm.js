@@ -1,4 +1,4 @@
-import { addEvent, getEvents } from "./eventProvider.js";
+import { addEvent, getEvents, deleteEvent } from "./eventProvider.js";
 import { eventList } from "./eventList.js";
 
 const targetElement = document.querySelector(".event-form-container");
@@ -24,6 +24,10 @@ const eventFormHandler = () => {
       };
 
       addEvent(newEvent).then(getEvents).then(eventList).then(eventFormReset);
+    }
+
+    if (clickEvent.target.className === "event-delete-button") {
+      deleteEvent(clickEvent.target.id).then(getEvents).then(eventList);
     }
   });
 };

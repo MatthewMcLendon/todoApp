@@ -21,3 +21,9 @@ export const addEvent = (newEvent) => {
     body: JSON.stringify(newEvent),
   });
 };
+
+export const deleteEvent = (eventID) => {
+  return fetch(`http://localhost:8088/events/${eventID}`, {
+    method: "DELETE",
+  });
+};
