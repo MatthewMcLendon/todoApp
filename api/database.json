@@ -3,7 +3,10 @@
     {
       "description": "Test 1",
       "completed": false,
-      "id": 1
+      "id": 1,
+      "title": "Test 3",
+      "location": "Test 1",
+      "date": "2023-06-15T14:27:00:00"
     },
     {
       "description": "Test 2",
@@ -49,6 +52,20 @@
       "description": "Test 10",
       "completed": false,
       "id": 10
+    },
+    {
+      "description": "Test 11",
+      "completed": false,
+      "id": 11
+    }
+  ],
+  "events": [
+    {
+      "title": "Test 4",
+      "description": "Test 4",
+      "location": "Test 4",
+      "date": "2023-06-29T16:44",
+      "id": 6
     }
   ]
 }
