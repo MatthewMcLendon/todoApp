@@ -27,3 +27,13 @@ export const deleteEvent = (eventID) => {
     method: "DELETE",
   });
 };
+
+export const updateEvent = (updatedEvent) => {
+  return fetch(`http://localhost:8088/events/${updatedEvent.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedEvent),
+  });
+};

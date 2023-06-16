@@ -6,6 +6,7 @@ export const eventComponent = (event) => {
     <p class="event-description">${event.description}</p>
     <div class="event-date-container">${dateFormater(event.date)}</div>
     <button class="event-delete-button" id="${event.id}">Delete event</button>
+    <button class="event-update-button" id="${event.id}">Update event</button>
     </div>
     `;
 };
